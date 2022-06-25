@@ -22,7 +22,7 @@
                 <div class="row rowCustomer mb-5 bg-secondary" id="rowCustomer0" data-index="0">
                     <div class="col-md-4">
                         <label for="" class="col-form-label">Customer</label>
-                        <select name="orders[0][name]" id="name0" class="form-select form-control">
+                        <select name="orders[0][name]" id="name0" class="form-select selectName form-control">
                             <option value="">- Pilih Customer -</option>
                             @foreach ($customer as $item)
                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
@@ -127,6 +127,8 @@
         $('#name0').select2();
         $('#product0').select2();
 
+        const name = [];
+
         function addMenu(idsCustRow) {
             let rowCustomer = $('.rowCustomer');
             let rowCustomerLen = rowCustomer.length;
@@ -169,7 +171,7 @@
                             <div class="row rowCustomer mb-5 bg-secondary">
                                 <div class="col-md-4">
                                     <label for="" class="col-form-label">Customer</label>
-                                    <select name="orders[${(rowCustomerLen)}][name]" id="name${rowCustomerLen}" class="form-select form-control">
+                                    <select name="orders[${(rowCustomerLen)}][name]" id="name${rowCustomerLen}" class="form-select selectName form-control">
                                         <option value="">- Pilih Customer -</option>
                                         @foreach ($customer as $item)
                                             <option value="{{ $item->id }}">{{ $item->name }}</option>
@@ -218,9 +220,7 @@
             let data = form.serialize();
             let url = form.attr('action');
             let method = form.attr('method');
-            console.log('url', url);
-            console.log('data', data);
-            console.log('method', method);
+
             $.ajax({
                 type: method,
                 url: url,
