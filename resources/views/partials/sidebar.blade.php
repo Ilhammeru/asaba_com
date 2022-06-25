@@ -27,7 +27,7 @@
                         <!--end::Label-->
                     </div>
                     <!--end::Info-->
-                    <!--begin::User menu-->
+                    {{-- <!--begin::User menu-->
                     <div class="me-n2">
                         <!--begin::Action-->
                         <a href="#" class="btn btn-icon btn-sm btn-active-color-primary mt-n2" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-overflow="true">
@@ -81,7 +81,7 @@
                         <!--end::Menu-->
                         <!--end::Action-->
                     </div>
-                    <!--end::User menu-->
+                    <!--end::User menu--> --}}
                 </div>
                 <!--end::Section-->
             </div>
