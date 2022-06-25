@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [TransactionController::class, 'index'])->name("dashboard");
+Route::post('/transaction/store', [TransactionController::class, 'store'])->name('transaction.store');
 
 Route::get('/user', function() {
     $pageTitle = "Template User";

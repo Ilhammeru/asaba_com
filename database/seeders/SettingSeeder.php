@@ -20,7 +20,8 @@ class SettingSeeder extends Seeder
 
         $data = [
             [
-                'shipping_price' => 5000,
+                'name' => 'shipping_price',
+                'value' => '5000',
                 'created_at' => Carbon::now()
             ]
         ];

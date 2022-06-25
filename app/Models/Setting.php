@@ -22,6 +22,7 @@ class Setting extends Model
      * @return array
      */
     protected $fillable = [
-        'shipping_price'
+        'name',
+        'value'
     ];
 }

@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('setting', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('shipping_price');
+            $table->string('name');
+            $table->string('value');
             $table->timestamps();
         });
     }
