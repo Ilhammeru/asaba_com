@@ -17,12 +17,10 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();]
 
         $this->call([
-            UsersSeeder::class,
-            SettingsSeeder::class,
-            PaymentSeeder::class,
-            IndoRegionProvinceSeeder::class,
-            IndoRegionRegencySeeder::class,
-            IndoRegionDistrictSeeder::class,
+            UserSeeder::class,
+            DiscountSeeder::class,
+            ProductSeeder::class,
+            SettingSeeder::class
         ]);
     }
 }
