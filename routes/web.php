@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $pageTitle = 'dashboard';
-    return view('dashboard', compact('pageTitle'));
-});
+Route::get('/', [TransactionController::class, 'index'])->name("dashboard");
 
 Route::get('/user', function() {
     $pageTitle = "Template User";
@@ -47,3 +46,5 @@ Route::get('/password-email', function() {
 Route::get('/password-request', function() {
     return 'password request';
 })->name('password.request');
+
+Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction.index');
